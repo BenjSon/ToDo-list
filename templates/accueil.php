@@ -16,7 +16,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 ?>
 
-<div id="corps">
+<div id="corps" class="w3-main">
 
 <h1>Accueil</h1>
 
