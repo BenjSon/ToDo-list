@@ -6,6 +6,7 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
 {
 	header("Location:../index.php?view=conversations");
 	die("");
+<<<<<<< HEAD
 }
 
 include_once("libs/modele.php"); // listes
@@ -39,6 +40,9 @@ if (!valider("connecte","SESSION"))
 <body >
 
 <div style="margin-left:250px">
+=======
+}?>
+>>>>>>> 318f43cbb64810fc120e22a1fa85bef035ae17b8
     <div>Ajouter une tache</div>
     <form action="/ajout tâche" method="post">
         <div>
@@ -52,7 +56,7 @@ if (!valider("connecte","SESSION"))
 
         <label for="matière" >Dans quelle matière ?</label>
         <select name="matières" id="matières" required>
-            <option value="france">France</option>
+            <option value="français">France</option>
             <option value="espagne">Espagne</option>
             <option value="etats-unis">États-Unis</option>
             <option value="chine">Chine</option>
@@ -72,8 +76,11 @@ if (!valider("connecte","SESSION"))
 
     </form>
 </div>
+<<<<<<< HEAD
 </div>
 </body>
 </html>
 
 
+=======
+>>>>>>> 318f43cbb64810fc120e22a1fa85bef035ae17b8
