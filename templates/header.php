@@ -13,6 +13,8 @@ header('Content-Type: text/html;charset=utf-8');
 // Pose qq soucis avec certains serveurs...
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 ?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -36,7 +38,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 
 <a href="index.php?view=accueil">Accueil</a>
 <a href="index.php?view=users">Utilisateurs</a>
-<a href="index.php?view=tâche">Ajouter une tâche</a>
+<a href="index.php?view=taches">Ajouter une tâche</a>
 
 <?php
 // Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
