@@ -47,10 +47,26 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <h3 class="w3-wide"><b>Ma TDL</b></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-  	<a href="index.php?view=tache" class="w3-bar-item w3-button">Ajouter une tâche</a>
+  	
+  	<?php
+		// Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
+		if (!valider("connecte","SESSION"))
+		echo "<a href=\"index.php?view=login\" class=\"w3-bar-item w3-button\">Se connecter</a>";
+	?>
+	<a href="index.php?view=tache" class="w3-bar-item w3-button">Ajouter une tâche</a>
+	<a href="index.php?view=today" class="w3-bar-item w3-button">Aujourd'hui et demain</a>
+	<a href="index.php?view=important" class="w3-bar-item w3-button">Important</a>
 
-    <a href="index.php?view=today" class="w3-bar-item w3-button">Aujourd'hui et demain</a>
-    <a href="index.php?view=important" class="w3-bar-item w3-button">Important</a>
+
+	<!-- <?php
+		// Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
+		if (valider("connecte","SESSION")){
+			echo "<a href=\"index.php?view=tache\" class=\"w3-bar-item w3-button\">Ajouter une tâche</a>";
+			echo "<a href=\"index.php?view=today\" class=\"w3-bar-item w3-button\">Aujourd'hui et demain</a>";
+			echo "<a href=\"index.php?view=important\" class=\"w3-bar-item w3-button\">Important</a>";
+		}
+		
+	?> -->
 
     </div>
     
@@ -59,6 +75,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
   <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+
 </nav>
 
 
@@ -66,9 +83,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 <div id="banniere">
 
-<div id="logo">
-<img src="ressources/ec-lille.png" />
-</div>
+
 
 <<<<<<< HEAD
 <a href="index.php?view=accueil">Accueil</a>
