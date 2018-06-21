@@ -53,7 +53,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 		if (!valider("connecte","SESSION"))
 		echo "<a href=\"index.php?view=login\" class=\"w3-bar-item w3-button\">Se connecter</a>";
 	?>
-	<a href="index.php?view=tache" class="w3-bar-item w3-button">Ajouter une tâche</a>
+	<a href="index.php?view=taches" class="w3-bar-item w3-button">Ajouter une tâche</a>
 	<a href="index.php?view=today" class="w3-bar-item w3-button">Aujourd'hui et demain</a>
 	<a href="index.php?view=important" class="w3-bar-item w3-button">Important</a>
 
@@ -93,6 +93,6 @@ if (!valider("connecte","SESSION"))
 	echo "<a href=\"index.php?view=login\" class=\"w3-bar-item w3-button\">Se connecter</a>";
 ?>
 
-<h1 id="stitre"> To Do List</h1>
+<h1 id="titre"> To Do List</h1>
 
 </div>
