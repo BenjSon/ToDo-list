@@ -59,7 +59,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 	<!-- <?php
-		// Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
+		// Si l'utilisateur EST connecte, on affiche les liens 
 		if (valider("connecte","SESSION")){
 			echo "<a href=\"index.php?view=tache\" class=\"w3-bar-item w3-button\">Ajouter une tâche</a>";
 			echo "<a href=\"index.php?view=today\" class=\"w3-bar-item w3-button\">Aujourd'hui et demain</a>";
@@ -85,12 +85,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 
-<<<<<<< HEAD
-<a href="index.php?view=accueil">Accueil</a>
-<a href="index.php?view=users">Utilisateurs</a>
-<a href="index.php?view=taches">Ajouter une tâche</a>
-=======
->>>>>>> e89681858574238c96a23c44fabe9f3d3141c9d9
+
 
 <?php
 // Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
