@@ -36,7 +36,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 
 <a href="index.php?view=accueil">Accueil</a>
 <a href="index.php?view=users">Utilisateurs</a>
-<a href="index.php?view=conversations">Conversations</a>
+<a href="index.php?view=tâche">Ajouter une tâche</a>
 
 <?php
 // Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
@@ -44,6 +44,6 @@ if (!valider("connecte","SESSION"))
 	echo "<a href=\"index.php?view=login\">Se connecter</a>";
 ?>
 
-<h1 id="stitre"> TinyMVC </h1>
+<h1 id="stitre"> To Do List</h1>
 
 </div>

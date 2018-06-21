@@ -36,7 +36,7 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
 			include("templates/login.php");
 		break; 
 
-		case "users" : 
+		case "users" :
 			include("templates/users.php");
 		break;
 
