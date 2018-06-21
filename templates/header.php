@@ -85,6 +85,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 
-<h1 id="stitre" class="w3-col l3 s6"> To Do List</h1>
+
 
 </div>
