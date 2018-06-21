@@ -9,7 +9,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 ?>
 
-<div id="corps" class="w3-main">
+<div id="corps" class="w3-main" style="margin-left:250px">
 
 <h1>Connexion</h1>
 
