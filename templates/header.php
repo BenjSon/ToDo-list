@@ -13,6 +13,8 @@ header('Content-Type: text/html;charset=utf-8');
 // Pose qq soucis avec certains serveurs...
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 ?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -83,6 +85,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
 
 
+<<<<<<< HEAD
+<a href="index.php?view=accueil">Accueil</a>
+<a href="index.php?view=users">Utilisateurs</a>
+<a href="index.php?view=taches">Ajouter une tâche</a>
+=======
+>>>>>>> e89681858574238c96a23c44fabe9f3d3141c9d9
 
 <?php
 // Si l'utilisateur n'est pas connecte, on affiche un lien de connexion 
