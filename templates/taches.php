@@ -21,7 +21,7 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
         <label for="matière" >Dans quelle matière ?</label>
         <select name="matières" id="matières" required>
             <option value="français">France</option>
-            <option value="espagne">Espagne</option>
+            <option value="Allemand">Espagne</option>
             <option value="etats-unis">États-Unis</option>
             <option value="chine">Chine</option>
             <option value="japon">Japon</option>
