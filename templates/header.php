@@ -61,7 +61,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	<!-- <?php
 		// Si l'utilisateur EST connecte, on affiche les liens 
 		if (valider("connecte","SESSION")){
-			echo "<a href=\"index.php?view=tache\" class=\"w3-bar-item w3-button\">Ajouter une tâche</a>";
+			echo "<a href=\"index.php?view=taches\" class=\"w3-bar-item w3-button\">Ajouter une tâche</a>";
 			echo "<a href=\"index.php?view=today\" class=\"w3-bar-item w3-button\">Aujourd'hui et demain</a>";
 			echo "<a href=\"index.php?view=important\" class=\"w3-bar-item w3-button\">Important</a>";
 		}
