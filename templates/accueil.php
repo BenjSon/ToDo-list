@@ -16,10 +16,10 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 ?>
 
-<div id="corps" class="w3-main">
+<div class="w3-main" style="margin-left:250px" >
 
 <h1>Accueil</h1>
 
-Bienvenue dans notre To do liste !
+Bienvenue dans notre To do list !
 
 </div>

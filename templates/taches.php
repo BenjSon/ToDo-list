@@ -36,9 +36,9 @@ if (!valider("connecte","SESSION"))
 
 
 <!-- **** B O D Y **** -->
-<body>
+<body >
 
-
+<div style="margin-left:250px">
     <div>Ajouter une tache</div>
     <form action="/ajout tâche" method="post">
         <div>
@@ -71,6 +71,7 @@ if (!valider("connecte","SESSION"))
 
 
     </form>
+</div>
 </div>
 </body>
 </html>
