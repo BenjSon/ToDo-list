@@ -71,7 +71,7 @@ function mkTable($tabData,$listeChamps=false)
 	// On produit un code ROBUSTE, donc on teste la taille du tableau
 	if (count($tabData) == 0) return;
 
-	echo "<table border=\"1\">\n";
+	echo "<table border=\"1\" style=\"margin-left:250px\">\n";
 	// afficher une ligne d'entete avec le nom des champs
 	mkLigneEntete($tabData[0],$listeChamps);
 
