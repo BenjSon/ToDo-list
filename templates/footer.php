@@ -9,7 +9,7 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 
 ?>
 
-<div id="pied">
+<footer class="w3-black w3-center w3-padding-24">
 
 <?php
 // Si l'utilisateur est connecte, on affiche un lien de deconnexion 
@@ -19,7 +19,7 @@ if (valider("connecte","SESSION"))
 	echo "<a href=\"controleur.php?action=Logout\">Se Déconnecter</a>";
 }
 ?>
-</div>
+</footer>
 
 </body>
 </html>

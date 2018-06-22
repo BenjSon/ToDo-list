@@ -85,6 +85,10 @@ session_start();
 
 				// On redirigera vers la page index automatiquement
 			break;
+			case 'Logout' : 
+				session_destroy();
+				$qs = "?view=login";
+			break; 
 		}
 
 	}

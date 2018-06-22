@@ -53,7 +53,8 @@ function verifUserBdd($login,$passe)
 	// dont les identifiants sont passes en paramètre
 	// renvoie faux si user inconnu
 	// renvoie l'id de l'utilisateur si succès
-
+	$SQL ="SELECT id_user FROM users WHERE login='$login' AND password='$passe'";
+	return SQLGetChamp($SQL);
 
 	// On utilise SQLGetCHamp
 	// si on avait besoin de plus d'un champ
