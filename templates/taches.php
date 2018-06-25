@@ -40,6 +40,7 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
                name="matière 4"
                value="choix4"> matière 4
         <br />
+        <br/>
 
         <label for="priorité">Quelle priorité?</label>
         <select name="priorité" id="pays" priorité>
@@ -48,6 +49,7 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
             <option value="3">3</option>
             <option value="4">4</option>
         </select>
+        <br/><br/>
 
         <input type="submit" value="Envoyer" />
 
