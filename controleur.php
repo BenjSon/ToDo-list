@@ -85,11 +85,20 @@ session_start();
 
 				// On redirigera vers la page index automatiquement
 			break;
+
 			case 'Logout' : 
 				session_destroy();
 				$qs = "?view=login";
-			break; 
+			break;
+
+			case 'creer':
+                if ($login = valider("login"))
+                if ($passe = valider("passe")){
+                	addUser($login,$passe);
+                    }
+                    break;
 		}
+
 
 	}
 

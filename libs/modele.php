@@ -45,86 +45,27 @@ function autoriserUtilisateur($idUser) {
 	SQLUpdate($SQL);
 }
 
-/********* EXERCICE 4 *********/
-
 function verifUserBdd($login,$passe)
 {
-	// Vérifie l'identité d'un utilisateur 
-	// dont les identifiants sont passes en paramètre
-	// renvoie faux si user inconnu
-	// renvoie l'id de l'utilisateur si succès
-	$SQL ="SELECT id_user FROM users WHERE login='$login' AND password='$passe'";
-	return SQLGetChamp($SQL);
+    // Vérifie l'identité d'un utilisateur
+    // dont les identifiants sont passes en paramètre
+    // renvoie faux si user inconnu
+    // renvoie l'id de l'utilisateur si succès
+    $SQL = "SELECT id_user FROM users WHERE login='$login' AND password='$passe'";
+    return SQLGetChamp($SQL);
+}
 
 	// On utilise SQLGetCHamp
-	// si on avait besoin de plus d'un champ
-	// on aurait du utiliser SQLSelect
-}
 
-function isAdmin($idUser)
-{
-	// vérifie si l'utilisateur est un administrateur
-}
-
-/********* EXERCICE 5 *********/
-
-function listerConversations($mode="tout")
-{
-	// Liste toutes les conversations ($mode="tout")
-	// OU uniquement celles actives  ($mode="actives"), ou inactives  ($mode="inactives")
-}
-
-function archiverConversation($idConversation)
-{
-	// rend une conversation inactive
+function compterUtilisateurs(){
+    $SQL ="SELECT COUNT * FROM users";
+    return SQLGetChamp($SQL);
 
 }
 
-function reactiverConversation($idConversation)
-{
-	// rend une conversation active
-
-}
-
-function creerConversation($theme)
-{
-	// crée une nouvelle conversation et renvoie son identifiant
-
-}
-
-function supprimerConversation($idConv)
-{
-	// supprime une conversation et ses messages
-	// Utiliser pour cela des mises à jour en cascade en appliquant l'intégrité référentielle
-
-}
-
-
-/********* EXERCICE 6 *********/
-
-function enregistrerMessage($idConversation, $idAuteur, $contenu)
-{
-	// Enregistre un message dans la base en encodant les caractères spéciaux HTML : <, > et & 
-	// pour interdire les messages HTML
-
-	
-}
-function listerMessages($idConv)
-{
-	// Liste les messages de cette conversation
-	// Champs à extraire : contenu, auteur, couleur 
-	// en ne renvoyant pas les utilisateurs blacklistés
-
-
-}
-
-function listerMessagesFromIndex($idConv,$index)
-{
-	// Liste les messages de cette conversation, 
-	// dont l'id est superieur à l'identifiant passé
-	// Champs à extraire : contenu, auteur, couleur 
-	// en ne renvoyant pas les utilisateurs blacklistés
-
+function addUser($login,$passe){
+$SQL="INSERT INTO users(id_user,name,login,password) VALUES (5,'Bonjour','$login','$passe')";
+return SQLGetCHamp($SQL);
 }
 
 function getConversation($idConv)
