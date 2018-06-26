@@ -164,6 +164,26 @@ function mkLien($url,$label, $qs="")
 
 function mkLiens($tabData,$champLabel, $champCible, $urlBase=false, $nomCible="")
 {
+	foreach ($tabData as $nextData) {	
+
+		if ($urlBase) {
+			// Une URL de base : on l'utilise et on la complète 
+			// par un paramètre supplémentaire venant de tabData
+			$url = "$urlBase&$nomCible=" . urlencode($nextData[$champCible]);
+		} 
+		else {
+			// pas de $urlBase : on utilise le champ $champCible comme url
+			$url = $nextData[$champCible]; 
+		}
+
+		echo "<a href=\"$url\" >\n"; 
+		echo $nextData[$champLabel]; 
+		echo "</a> <br />\n";
+	}
+
+	// Pour tester, ajouter dans le template des conversations : 
+	// mkLiens($conversations,"theme","id","index.php?view=chat","idConv");
+
 	// produit une liste de liens (plus facile à styliser)
 	// A partir de données fournies dans un tableau associatif	
 	// Chaque lien pointe vers une url définie par le champ $champCible
@@ -173,11 +193,12 @@ function mkLiens($tabData,$champLabel, $champCible, $urlBase=false, $nomCible=""
 	// dans la chaîne de requête, associé au paramètre $nomCible, après un '&' 
 
 	// Exemples d'appels : 
-	// mkLiens($conversations,"id","theme");
+	// mkLiens($conversations,"theme","id");
 	// produira <a href="1">Multimédia</a> ...
 
 	// mkLiens($conversations,"theme","id","index.php?view=chat","idConv");
 	// produira <a href="index.php?view=chat&idConv=1">Multimédia</a> ...
+    //href="index.php?view=chat&idConv=1">Multimédia</a> ...
 }
 ?>
 

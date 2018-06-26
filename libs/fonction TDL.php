@@ -26,7 +26,10 @@ function TDLall($idUser) {
 	return parcoursRs(SQLSelect($SQL));
 }
 
-
+function listsubjects($idUser){
+	$SQL = "SELECT DISTINCT subjects.id_subject,subjects.title FROM subjects JOIN concern ON subjects.id_subject=concern.id_subject JOIN tasks ON tasks.id_task=concern.id_task WHERE tasks.id_user='$idUser' ORDER BY subjects.title";
+	return parcoursRs(SQLSelect($SQL));
+}
 
 
 
