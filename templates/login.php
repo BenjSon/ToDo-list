@@ -14,18 +14,19 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 <h1>Connexion</h1>
 
 <div id="formLogin">
-<form action="controleur.php" method="GET">
+<form action="controleur.php" method="POST">
 Login : <input type="text" name="login" /><br />
 Passe : <input type="password" name="passe" /><br />
-<input type="submit" name="action" value="Connexion" />
+<input type="submit" name="action" value="login" />
 </form>
 </div>
 
     <h1>Créer un compte</h1>
-    <form action="controleur.php" method="GET">
+    <form action="controleur.php" method="POST">
+        Nom: <input type="text" name="nom" /><br />
         Login : <input type="text" name="login" /><br />
         Passe : <input type="password" name="passe" /><br />
-        Checkpass: <imput type="password" name="passe2" /><br/>
+        Confirm: <input type="password" id="confirm_pass" name="confirm_pass" /><br/>
         <input type="submit" name="action" value="creer" />
     </form>
 </div>

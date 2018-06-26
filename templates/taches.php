@@ -19,31 +19,31 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
     <form action="/ajout tâche" method="post" id="form">
         <div>
             <label for="name">Nom de la tâche:</label>
-            <input type="text" id="nom_tache" name="nom_tache" required>
+            <input type="text" id="nom_tache" name="title" required>
         </div>
         <div>
             <label for="Date">A faire avant le:</label>
-            <input type="text" id="mail" name="user_mail" required>
+            <input type="date" id="date" name="date" required>
         </div>
 
         <label for="matière" >Dans quelle matière ?</label>
         <input type="checkbox"
-               name="matière 1"
+               name="matiere 1"
                value="choix1"> matière 1
         <input type="checkbox"
-               name="matière 2"
+               name="matiere 2"
                value="choix2"> matière 2
         <input type="checkbox"
-               name="matière 3"
+               name="matiere 3"
                value="choix3"> matière 3
         <input type="checkbox"
-               name="matière 4"
+               name="matiere 4"
                value="choix4"> matière 4
         <br />
         <br/>
 
         <label for="priorité">Quelle priorité?</label>
-        <select name="priorité" id="pays" priorité>
+        <select name="priorite" id="pays" priorité>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -51,7 +51,7 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
         </select>
         <br/><br/>
 
-        <input type="submit" value="Envoyer" />
+        <input type="submit" value="addtask" />
 
 
         </form>
