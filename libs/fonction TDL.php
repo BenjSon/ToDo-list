@@ -31,6 +31,16 @@ function listsubjects($idUser){
 	return parcoursRs(SQLSelect($SQL));
 }
 
+function getSubject($idSub,$idUser){
+	$SQL = "SELECT title FROM subjects WHERE id_subject='$idSub'";
+	return SQLGetCHamp($SQL);
+}
+
+
+function listTasks($idSub,$idUser){
+	$SQL = "SELECT tasks.title,tasks.date_end, tasks.priority FROM tasks JOIN concern ON concern.id_task=tasks.id_task JOIN subjects ON subjects.id_subject=concern.id_subject WHERE tasks.id_user='$idUser' AND subjects.id_subject='$idSub' ORDER BY tasks.priority DESC";
+	return parcoursRs(SQLSelect($SQL));
+}
 
 
 ?>

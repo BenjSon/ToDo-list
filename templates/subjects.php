@@ -26,9 +26,10 @@ foreach ($subjects as $sub) {
 	
 			// Une URL de base : on l'utilise et on la complète 
 			// par un paramètre supplémentaire venant de tabData
-		$url = "index.php?view=list&idSubject" . urlencode($sub["id_subject"]);
+		$idSubject=$sub["id_subject"];
+		$url = "index.php?view=list&idSubject=" . urlencode($idSubject);
 
-		echo "<a href=\"$url\" >\n"; 
+		echo "<a href=\"$url\" style=\"margin-left:250px\">\n"; 
 		echo $sub["title"]; 
 		echo "</a> <br />\n";
 	}
