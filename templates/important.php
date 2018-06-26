@@ -19,7 +19,7 @@ include_once("libs/fonction TDL.php");
 <h1 style="margin-left:250px">Toutes mes tâches</h1>
 
 <?php
-$tasks = recupTodo();
+$tasks = TDLimportant($_SESSION["idUser"]);
 mkTable($tasks);
 ?>
 
