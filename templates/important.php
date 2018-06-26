@@ -16,10 +16,13 @@ include_once("libs/fonction TDL.php");
 
 ?>
 
-<h1 style="margin-left:250px">Toutes mes tâches</h1>
+<h1 style="margin-left:250px">Mes tâches importantes</h1>
 
 <?php
 $tasks = TDLimportant($_SESSION["idUser"]);
 mkTable($tasks);
+
+
+
 ?>
 

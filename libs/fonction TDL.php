@@ -8,9 +8,19 @@ function TDLimportant($idUser) {
 	return parcoursRs(SQLSelect($SQL));
 }
 
+function TDLtoday($idUser) {
+	$date=date("Y-m-d");
 
+	$SQL = "SELECT title,date_end,priority FROM tasks WHERE id_user='$idUser' AND date_end='$date' ORDER BY priority DESC";
+	return parcoursRs(SQLSelect($SQL));
+}
 
+function TDLtmrw($idUser) {
+	$tmrw = date('Y-m-d', strtotime('+1 day'));
 
+	$SQL = "SELECT title,date_end,priority FROM tasks WHERE id_user='$idUser' AND date_end='$tmrw' ORDER BY priority DESC";
+	return parcoursRs(SQLSelect($SQL));
+}
 
 
 
