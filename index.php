@@ -58,6 +58,9 @@ Les formulaires de toutes les vues générées enverront leurs données vers la 
         case "subjects":
             include("templates/subjects.php");
             break;
+        case "delete":
+        	include("templates/delete.php");
+        	break;
 
 		default : // si le template correspondant à l'argument existe, on l'affiche
 			if (file_exists("templates/$view.php"))

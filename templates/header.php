@@ -29,7 +29,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style_form.css">
-    <link rel="stylesheet" type="text/css" href="./styleheader.css">
+
 
 </head>
 <!-- **** F I N **** H E A D **** -->
@@ -60,10 +60,12 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" ?>";
 		// Si l'utilisateur EST connecte, on affiche les liens 
 		if (valider("connecte","SESSION")){
 			echo "<a href=\"index.php?view=taches\" class=\"w3-bar-item w3-button\">Ajouter une tâche</a>";
+            echo "<a href=\"index.php?view=delete\" class=\"w3-bar-item w3-button\">supprimer une tâche</a>";
             echo "<a href=\"index.php?view=all\" class=\"w3-bar-item w3-button\">Toutes mes tâches</a>";
 			echo "<a href=\"index.php?view=today\" class=\"w3-bar-item w3-button\">Aujourd'hui et demain</a>";
 			echo "<a href=\"index.php?view=important\" class=\"w3-bar-item w3-button\">Important</a>";
             echo "<a href=\"index.php?view=subjects\" class=\"w3-bar-item w3-button\">Matières et sections</a>";
+
 		}
 		
 	?>

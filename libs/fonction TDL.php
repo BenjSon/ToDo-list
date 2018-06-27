@@ -47,5 +47,9 @@ function listTasks($idSub,$idUser){
 	return parcoursRs(SQLSelect($SQL));
 }
 
+function listLibelleTask($idUser){
+	$SQL = "SELECT tasks.title FROM tasks JOIN concern ON concern.id_task=tasks.id_task JOIN subjects ON subjects.id_subject=concern.id_subject WHERE tasks.id_user='$idUser' ORDER BY tasks.priority DESC";
+	return parcoursRs(SQLSelect($SQL));
+}
 
 ?>

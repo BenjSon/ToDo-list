@@ -2,9 +2,9 @@
 // Ce fichier permet de tester les fonctions développées dans le fichier malibforms.php
 
 // Si la page est appelée directement par son adresse, on redirige en passant pas la page index
-if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
+if (basename($_SERVER["PHP_SELF"]) == "taches.php")
 {
-	header("Location:../index.php?view=conversations");
+	header("Location:../index.php?view=taches");
 	die("");
 }
 
