@@ -1,6 +1,6 @@
 <?php
 include_once "maLibUtils.php";
-include_once "maLibSQL.php";
+include_once "maLibSQL.pdo.php";
 
 function TDLimportant($idUser) {
 
@@ -11,27 +11,9 @@ function TDLimportant($idUser) {
 function TDLtoday($idUser) {
 	$date=date("Y-m-d");
 
-
-function compterUtilisateurs(){
-    $SQL ="SELECT COUNT * FROM users";
-    return SQLGetChamp($SQL)+1;
-
-}
-$nb=compterUtilisateurs();
-
-function addUser($nb, $nom,$login,$passe){
-    $SQL="INSERT INTO users(id_user,name,login,password) VALUES ('$nb','$nom','$login','$passe')";
-    return SQLGetCHamp($SQL);
-}
-
-
-
-
-
 	$SQL = "SELECT title AS 'Libellé tâche' ,date_end as 'Deadline',priority as'Priorité' FROM tasks WHERE id_user='$idUser' AND date_end='$date' ORDER BY priority DESC";
 	return parcoursRs(SQLSelect($SQL));
 }
-
 
 function TDLtmrw($idUser) {
 	$tmrw = date('Y-m-d', strtotime('+1 day'));
@@ -39,8 +21,13 @@ function TDLtmrw($idUser) {
 	$SQL = "SELECT title AS 'Libellé tâche' ,date_end as 'Deadline',priority as'Priorité' FROM tasks WHERE id_user='$idUser' AND date_end='$tmrw' ORDER BY priority DESC";
 	return parcoursRs(SQLSelect($SQL));
 }
-function TDLall($idUser) {
+function TDLall2($idUser) {
 	$SQL = "SELECT title AS 'Libellé tâche' ,date_end as 'Deadline',priority as'Priorité' FROM tasks WHERE id_user='$idUser'  ORDER BY date_end DESC,priority DESC";
+	return parcoursRs(SQLSelect($SQL));
+}
+
+function TDLall($idUser) {
+	$SQL = "SELECT subjects.title AS 'Matière ou Section',tasks.title AS 'Libellé tâche' ,tasks.date_end as 'Deadline',tasks.priority as'Priorité' FROM tasks JOIN concern ON concern.id_task=tasks.id_task JOIN subjects ON subjects.id_subject=concern.id_subject WHERE tasks.id_user='$idUser' ORDER BY subjects.title, tasks.date_end DESC,tasks.priority DESC";
 	return parcoursRs(SQLSelect($SQL));
 }
 

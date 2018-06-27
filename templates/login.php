@@ -17,16 +17,15 @@ if (basename($_SERVER["PHP_SELF"]) != "index.php")
 <form action="controleur.php" method="GET">
 Login : <input type="text" name="login" /><br />
 Passe : <input type="password" name="passe" /><br />
-<input type="submit" name="action" value="login" />
+<input type="submit" name="action" value="Connexion" />
 </form>
 </div>
 
     <h1>Créer un compte</h1>
-    <form action="controleur.php" method="POST">
-        Nom: <input type="text" name="nom" /><br />
+    <form action="controleur.php" method="GET">
         Login : <input type="text" name="login" /><br />
         Passe : <input type="password" name="passe" /><br />
-        Confirm: <input type="password" id="confirm_pass" name="confirm_pass" /><br/>
+        Checkpass: <imput type="password" name="passe2" /><br/>
         <input type="submit" name="action" value="creer" />
     </form>
 </div>
