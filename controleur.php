@@ -74,15 +74,18 @@ session_start();
 
             case 'Connexion' :
                 // On verifie la presence des champs login et passe
+                $qs = "?view=login&msg=" . urlencode("Identifiant(s) absent(s)");
                 if ($login = valider("login"))
-                    if ($passe = valider("passe")) {
-                        // On verifie l'utilisateur, et on crée des variables de session si tout est OK
+                    if ($passe = valider("passe"))
+                    {
+                        // On verifie l'utilisateur,
+                        // et on crée des variables de session si tout est OK
                         // Cf. maLibSecurisation
-                        verifUser($login, $passe);
-
+                        if (!verifUser($login,$passe)) {
+                            $qs = "?view=login&msg=" . urlencode("Identifiants incorrects");
+                        }
+                        else $qs = "?view=login";
                     }
-
-                // On redirigera vers la page index automatiquement
                 break;
 
             case 'Logout' :
