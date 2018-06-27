@@ -16,7 +16,7 @@ if (basename($_SERVER["PHP_SELF"]) == "conversations.php")
 
 
     <h3>Ajouter une tache</h3>
-    <form action="/ajout tâche" method="post" id="form">
+    <form action="controleur.php" method="POST" id="form">
         <div>
             <label for="name">Nom de la tâche:</label>
             <input type="text" id="nom_tache" name="nom_tache" required>
