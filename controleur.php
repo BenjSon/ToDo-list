@@ -84,7 +84,10 @@ session_start();
                         if (!verifUser($login,$passe)) {
                             $qs = "?view=login&msg=" . urlencode("Identifiants incorrects");
                         }
-                        else $qs = "?view=login";
+                        else{
+                        $qs = "?view=login";
+        
+                        }
                     }
                 break;
 

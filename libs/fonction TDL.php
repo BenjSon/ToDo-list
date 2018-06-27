@@ -11,7 +11,7 @@ function TDLimportant($idUser) {
 function TDLtoday($idUser) {
 	$date=date("Y-m-d");
 
-<<<<<<< HEAD
+
 function compterUtilisateurs(){
     $SQL ="SELECT COUNT * FROM users";
     return SQLGetChamp($SQL)+1;
@@ -27,11 +27,11 @@ function addUser($nb, $nom,$login,$passe){
 
 
 
-=======
+
 	$SQL = "SELECT title AS 'Libellé tâche' ,date_end as 'Deadline',priority as'Priorité' FROM tasks WHERE id_user='$idUser' AND date_end='$date' ORDER BY priority DESC";
 	return parcoursRs(SQLSelect($SQL));
 }
->>>>>>> 1ac0c6e93839d7e7b53a9c4d360cb8109f1b9f5a
+
 
 function TDLtmrw($idUser) {
 	$tmrw = date('Y-m-d', strtotime('+1 day'));
