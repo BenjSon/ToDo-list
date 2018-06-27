@@ -58,29 +58,14 @@ function verifUserBdd($login,$passe)
 	// On utilise SQLGetCHamp
 
 function compterUtilisateurs(){
-    $SQL ="SELECT COUNT(id_user) FROM users";
-    return SQLGetChamp($SQL)+1;
-
-}
-
-function compterConcern(){
-    $SQL ="SELECT COUNT(id_concern) FROM concern";
-    return SQLGetChamp($SQL)+1;
-}
-function compterTache(){
-    $SQL ="SELECT COUNT(id_tasks) FROM tasks";
-    return SQLGetChamp($SQL)+1;
-}
-
-function addUser($nb, $nom,$login,$passe){
-    $SQL="INSERT INTO users(id_user,name,login,password) VALUES ('$nb','$nom','$login','$passe')";
-    return SQLGetCHamp($SQL);
-}
-
-function addTask($nbtache,$nbconcern,$deux,$trois,$quatre,$idUser){
-    $SQL="INSERT INTO tasks(id_task,title,date_end,priority, id_user) VALUES ('$nbtache','$deux','$trois','$quatre','$idUser')";
-    $SQL="INSERT INTO concern(id_junction,id_task,id_subject) VALUES('$nbconcern','$nbtache','$idUser')";
+    $SQL ="SELECT COUNT * FROM users";
     return SQLGetChamp($SQL);
+
+}
+
+function addUser($login,$passe){
+$SQL="INSERT INTO users(id_user,name,login,password) VALUES (5,'Bonjour','$login','$passe')";
+return SQLGetCHamp($SQL);
 }
 
 function getConversation($idConv)
