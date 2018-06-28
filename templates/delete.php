@@ -18,19 +18,24 @@ mkTable($tab);
 
 
 <div>
-	<form action="controleur.php" style="margin-left:250px">
+	<form action="controleur.php" style="margin-left:250px" method="POST">
 		<h3>choisissez la tâche à supprimer</h3>
-		<select name="tâche:" id="choixDelete">
+		
+		<select name="tache" id="choixDelete" value="tache:">
+      		
       		<?php
+      
       		foreach ($tab as $task) {
-				echo "<option value=".$task.">".$task."</option>";   
+				echo "<option value=".$task['id_task'].">".$task['title']."</option>";   
+					   		 
 	   		 }
 
       		?>
 
-        </select></br>
+        </select></br></br>
 
         <input type="submit" name="action" value="supprimer">
+        </br></br>
 		
 	</form>
 </div>

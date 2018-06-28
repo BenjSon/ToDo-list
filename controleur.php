@@ -4,7 +4,8 @@ session_start();
 	include_once "libs/maLibUtils.php";
 	include_once "libs/maLibSQL.pdo.php";
 	include_once "libs/maLibSecurisation.php"; 
-	include_once "libs/modele.php"; 
+	include_once "libs/modele.php";
+    include_once "libs/fonction TDL.php"; 
 
 	$qs = "";
 
@@ -96,7 +97,13 @@ session_start();
                 if ($passe = valider("passe")){
                 	addUser($login,$passe);
                     }
-                    break;
+            break;
+
+            case 'supprimer':
+                delete($_SESSION["idUser"],$_POST["tache"]);
+                $qs="?view=delete";
+            break;
+
 		}
 
 

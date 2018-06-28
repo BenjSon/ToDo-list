@@ -48,8 +48,14 @@ function listTasks($idSub,$idUser){
 }
 
 function listLibelleTask($idUser){
-	$SQL = "SELECT tasks.title FROM tasks JOIN concern ON concern.id_task=tasks.id_task JOIN subjects ON subjects.id_subject=concern.id_subject WHERE tasks.id_user='$idUser' ORDER BY tasks.priority DESC";
+	$SQL = "SELECT tasks.title,tasks.id_task FROM tasks JOIN concern ON concern.id_task=tasks.id_task JOIN subjects ON subjects.id_subject=concern.id_subject WHERE tasks.id_user='$idUser' ORDER BY tasks.priority DESC";
 	return parcoursRs(SQLSelect($SQL));
+}
+function delete($idUser,$id){
+	$SQL="DELETE FROM tasks WHERE tasks.id_task=".$id;
+	SQLDelete($SQL);
+	$SQL="DELETE FROM concern WHERE concern.id_task=".$id;
+	return SQLDelete($SQL);
 }
 
 ?>
